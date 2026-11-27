@@ -84,6 +84,7 @@ a:hover{color:var(--red)}
   margin:0 0 0 -.04em;
   font:400 192px/.82 var(--display);
 }
+.mast h1:hover{color:var(--red)}
 .mast p{margin:28px 0 0;max-width:36em;font-size:21px;line-height:1.45}
 .mast p + p{margin-top:12px;font-size:18px;line-height:1.6;color:var(--ash)}
 

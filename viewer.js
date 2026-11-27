@@ -1,8 +1,9 @@
 /*
   The pop-up viewer: opens a piece larger when someone selects it, shows any
   extra photos of it, and flips to the previous or next piece in the same
-  group with the buttons or the arrow keys. Without JavaScript, selecting a
-  piece simply opens its photo.
+  group with the buttons or the arrow keys. Pieces with an artist statement
+  show a link to it. Without JavaScript, selecting a piece opens its photo,
+  or its statement page if it has one.
 */
 (function () {
   "use strict";
@@ -18,7 +19,7 @@
 
   function photosFor(link) {
     var img = link.querySelector("img");
-    var list = [{ src: link.getAttribute("href"), alt: img ? img.alt : "" }];
+    var list = [{ src: link.getAttribute("data-full") || link.getAttribute("href"), alt: img ? img.alt : "" }];
     (link.getAttribute("data-more") || "").split(";").forEach(function (part) {
       var bits = part.split("|");
       if (bits[0] && bits[0].trim()) {

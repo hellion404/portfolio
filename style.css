@@ -67,7 +67,7 @@ a:hover{color:var(--red)}
 .top-home{justify-content:flex-end}
 .home-link{font:400 48px/1 var(--display);text-decoration:none}
 .home-link:hover{color:var(--red)}
-.nav{display:flex;gap:28px;margin:0;padding:0;list-style:none}
+.nav{display:flex;flex-wrap:wrap;gap:6px 28px;margin:0;padding:0;list-style:none}
 .nav a{
   display:block;
   padding:2px 0;
@@ -141,15 +141,12 @@ figcaption{margin-top:10px;font-size:15px;line-height:1.45;color:var(--ash)}
 .quote p{margin:0;font-style:italic;max-width:60ch}
 .quote cite{display:block;margin-top:12px;font-style:normal;font-size:15px;line-height:1.45;color:var(--ash)}
 
-.pager{
-  display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 32px;
-  margin:88px 0 0; padding-top:24px;
-  border-top:1px solid var(--edge);
-}
-.pager a{text-decoration:none;font-size:19px;font-weight:600;font-stretch:75%}
-.pager a:last-child{text-align:right;margin-left:auto}
-.pager small{display:block;font-size:15px;font-weight:400;font-stretch:100%;color:var(--ash)}
-.pager a:hover small{color:var(--ash)}
+.back-row{margin:88px 0 0;padding-top:28px;border-top:1px solid var(--edge)}
+
+/* the fun fact box on a statement page */
+.fact{margin:36px 0 0;max-width:62ch;padding:22px 26px 24px;border:2px solid var(--edge)}
+.fact h2{margin:0 0 12px;font:400 48px/.9 var(--display)}
+.fact p{margin:0}
 
 /* ---------- writing ---------- */
 .intro{margin:0 0 40px;max-width:40em;font-size:21px;line-height:1.45}
@@ -229,6 +226,21 @@ html.viewing{overflow:hidden}
 .viewer-buttons button:hover{border-color:var(--red)}
 .viewer-buttons [data-close]{margin-left:auto}
 
+/* ---------- the hidden knight (see site.js) ---------- */
+.knight{position:fixed;left:0;bottom:12px;z-index:50;pointer-events:none}
+.knight-body{background:url("knight.png") 0 0 no-repeat;image-rendering:pixelated}
+.knight-says{
+  position:absolute; bottom:calc(100% + 10px);
+  transform:translateX(-50%);
+  margin:0; padding:4px 12px 7px;
+  white-space:nowrap;
+  font:400 24px/1 var(--display);
+  color:var(--bone); background:var(--ink);
+  border:2px solid var(--bone);
+  opacity:0;
+}
+.knight-says.show{opacity:1}
+
 /* ---------- 404 ---------- */
 .lost p{font-size:21px;max-width:36em}
 
@@ -278,7 +290,8 @@ html.viewing{overflow:hidden}
   .intro{font-size:19px}
   .dogma{padding:22px 22px 24px}
   .dogma-name{font-size:96px}
-  .pager{margin-top:64px}
+  .back-row{margin-top:64px}
+  .fact{padding:18px 18px 20px}
   .foot{margin-top:88px}
 }
 @media (max-width:400px){

@@ -4,22 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nate Langley</title>
-<meta name="description" content="The art portfolio of Nate Langley, an artist and art teacher in training in College Park, Maryland: sculpture, painting, printmaking and drawing.">
+<meta name="description" content="The art portfolio of Nate Langley, an artist and art teacher in training in College Park, Maryland: sculpture, painting, printmaking, and drawing.">
 <link rel="stylesheet" href="style.css">
 <!--
   HOW THIS SITE IS PUT TOGETHER
-  * index.html (this page) holds the main portfolio: the sculpture
-    concentration first, then the range of other media.
+  * index.html (this page) is Selected Work: the sculpture concentration
+    first, then the range of other media. archive.html holds everything else.
   * Each piece is one <figure class="work"> … </figure> block. To change a
-    title, medium or size, edit the text inside its <figcaption>.
-  * Sizes still to fill in say "Size needed". Search for that phrase, replace
-    it with the size, and delete class="todo" from that line.
+    title, medium, or size, edit the text inside its <figcaption>.
+  * Sizes still to fill in say "Size needed". Replace that phrase with the
+    size, and delete class="todo" from that line.
   * To add a piece: put the photo next to these files, copy a whole
     <figure> block, paste it where you want it, and change the file name,
     alt text (a short description for people who can't see the image),
-    title and details. Extra photos of the same piece go in data-more,
+    title, and details. Extra photos of the same piece go in data-more,
     written as file.jpg|description, separated by semicolons.
-  * Colors and fonts live in style.css. The pop-up viewer lives in viewer.js.
+  * A piece with an artist statement opens in the viewer like the rest,
+    with a link to its own page (for example href="kermit.html"). Its
+    photo goes in data-full.
+  * Colors and fonts live in style.css. The pop-up viewer lives in
+    viewer.js, and the back button and the hidden knight live in site.js.
   * Keep every file in the same folder, with no subfolders, when you upload.
 -->
 </head>
@@ -29,7 +33,8 @@
 <header class="wrap top top-home">
   <nav aria-label="Main">
     <ul class="nav">
-      <li><a href="index.html" aria-current="page">Work</a></li>
+      <li><a href="index.html" aria-current="page">Selected Work</a></li>
+      <li><a href="archive.html">Archive</a></li>
       <li><a href="writing.html">Writing</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
@@ -39,46 +44,47 @@
 <main id="main" class="wrap">
   <div class="mast">
     <h1>Nate Langley</h1>
-    <p>Artist and art teacher in training in College Park, Maryland. I make sculpture, paintings, prints and drawings, and I write.</p>
+    <p>Artist and art teacher in training in College Park, Maryland. I make sculpture, paintings, prints, and drawings, and I write.</p>
     <p>Select any piece to see it larger and flip through the rest.</p>
   </div>
 
   <section class="set" id="sculpture" aria-labelledby="sculpture-h">
     <div class="set-head">
       <h2 id="sculpture-h">Sculpture</h2>
-      <p>My concentration: seven sculptures in steel, wood, clay, paper and found objects.</p>
+      <p>My concentration: seven sculptures in steel, wood, clay, paper, and found objects.</p>
     </div>
   <div class="gallery gallery-feature">
     <figure class="work big" id="monolith">
-      <a class="work-pic" href="monolith-snow.jpg" data-more="monolith-scale.jpg|The same column freshly welded, standing beside the artist, who is exactly its height.">
+      <a class="work-pic" href="monolith.html" data-full="monolith-snow.jpg" data-statement data-more="monolith-scale.jpg|The same column freshly welded, standing beside the artist, who is exactly its height.">
         <img src="monolith-snow.jpg" width="1019" height="1600" loading="lazy" alt="A tall square steel column standing in a snowy yard, rusted bright orange on its lower half, with a viewing hole cut near the top.">
       </a>
       <figcaption>
-        <h3>Untitled (The Monolith)</h3>
+        <h3>Untitled (The monolith)</h3>
         <p>Welded steel</p>
-        <p>6 ft tall</p>
+        <p>Approx. 6′ × 14″ × 8.5″</p>
         <p class="statement-link"><a href="monolith.html">Read the artist statement</a></p>
       </figcaption>
     </figure>
     <figure class="work big" id="poo-mans-love">
-      <a class="work-pic" href="poo-mans-love.jpg">
-        <img src="poo-mans-love.jpg" width="1200" height="1600" loading="lazy" alt="A brown coiled serpent sculpture with a troll doll’s smiling face and open arms, an orange VHS reel behind its head like a halo, and a strip of videotape hanging down to the table.">
+      <a class="work-pic" href="poo-mans-love.html" data-full="poo-mans-love.jpg" data-statement>
+        <img src="poo-mans-love.jpg" width="1200" height="1600" loading="lazy" alt="A brown coiled creature with a troll doll’s smiling face and open arms, an orange VHS reel behind its head like a halo, and a strip of videotape hanging down to the table.">
       </a>
       <figcaption>
         <h3>Poo Man’s Love</h3>
-        <p>Wood, deconstructed troll doll, VHS reel and tape, acrylic paint</p>
-        <p>About 14 × 11 in</p>
+        <p>Wood, deconstructed troll doll, VHS reel and tape, and acrylic paint</p>
+        <p>14″ × 11″ × 11″</p>
         <p class="statement-link"><a href="poo-mans-love.html">Read the artist statement</a></p>
       </figcaption>
     </figure>
     <figure class="work" id="kermit">
-      <a class="work-pic" href="kermit-1.jpg" data-more="kermit-2.jpg|The same sculpture seen from the front, standing in a gallery hallway.">
-        <img src="kermit-1.jpg" width="1200" height="1600" loading="lazy" alt="Two tall A-frames of wooden poles lashed together with twine hold up a crossbar, with a Kermit the Frog plush draped over it.">
+      <a class="work-pic" href="kermit.html" data-full="kermit-1.jpg" data-statement data-more="kermit-2.jpg|The same sculpture seen from the front, standing in a gallery hallway.">
+        <img src="kermit-1.jpg" width="1200" height="1600" loading="lazy" alt="Two tall A-frames of wooden poles lashed together with twine hold up a crossbar. A Kermit the Frog plush with added teeth is impaled through the mouth on the crossbar, his stomach cut open.">
       </a>
       <figcaption>
-        <h3>Hi Ho Kermit the Fraud</h3>
-        <p>Wooden poles, twine and a Kermit the Frog plush</p>
-        <p class="todo">Size needed</p>
+        <h3>Hi ho, Kermit the Fraud here</h3>
+        <p>Wood, twine, acrylic teeth, and a Kermit the Frog plush</p>
+        <p>6′ × 5.5′ × 4′</p>
+        <p class="statement-link"><a href="kermit.html">Read the artist statement</a></p>
       </figcaption>
     </figure>
     <figure class="work" id="flow">
@@ -87,18 +93,18 @@
       </a>
       <figcaption>
         <h3>Flow</h3>
-        <p>Hardwood, plywood and bent steel rod</p>
-        <p class="todo">Size needed</p>
+        <p>Hardwood, plywood, and bent steel rod</p>
+        <p>18″ × 12″ × 6″</p>
       </figcaption>
     </figure>
     <figure class="work" id="pissman">
       <a class="work-pic" href="pissman.jpg">
-        <img src="pissman.jpg" width="1200" height="1600" loading="lazy" alt="A lumpy ceramic figure glazed bright yellow, with two holes for eyes, a wide mouth and stubby arms.">
+        <img src="pissman.jpg" width="1200" height="1600" loading="lazy" alt="A lumpy ceramic figure glazed bright yellow, with two holes for eyes, a wide mouth, and stubby arms.">
       </a>
       <figcaption>
         <h3>PISSMAN</h3>
         <p>Glazed ceramic</p>
-        <p class="todo">Size needed</p>
+        <p>Just a guy (about 5″ tall)</p>
       </figcaption>
     </figure>
     <figure class="work big" id="overgrowth">
@@ -107,8 +113,8 @@
       </a>
       <figcaption>
         <h3>Overgrowth</h3>
-        <p>Papier-mâché over wire, watercolor and twine, installed in a studio cabinet</p>
-        <p class="todo">Size needed</p>
+        <p>Papier-mâché over wire, watercolor, and twine, installed in a studio cabinet</p>
+        <p>30″ × 23″ × 10″</p>
       </figcaption>
     </figure>
     <figure class="work big" id="untitled-wood">
@@ -118,7 +124,7 @@
       <figcaption>
         <h3>Untitled</h3>
         <p>Cut and stacked wood</p>
-        <p class="todo">Size needed</p>
+        <p>48″ × 10″ × 9″</p>
       </figcaption>
     </figure>
   </div>
@@ -127,28 +133,28 @@
   <section class="set" id="range" aria-labelledby="range-h">
     <div class="set-head">
       <h2 id="range-h">Range</h2>
-      <p>Fifteen works across painting, printmaking, collage and drawing.</p>
+      <p>Fifteen works across painting, printmaking, collage, and drawing.</p>
     </div>
   <div class="gallery">
     <figure class="work" id="pet">
-      <a class="work-pic" href="pet.jpg">
-        <img src="pet.jpg" width="1026" height="1600" loading="lazy" alt="A painting in red, blue and black of a large figure in a starred hoodie resting a hand on the head of a smaller figure whose eyes are closed.">
+      <a class="work-pic" href="pet.html" data-full="pet.jpg" data-statement>
+        <img src="pet.jpg" width="1026" height="1600" loading="lazy" alt="A painting in red, blue, and black of a large figure in a starred hoodie resting a hand on the head of a smaller figure whose eyes are closed.">
       </a>
       <figcaption>
         <h3>Pet</h3>
         <p>Acrylic and colored pencil on cardboard</p>
-        <p>About 8 × 5 in</p>
+        <p>Approx. 8″ × 5″</p>
         <p class="statement-link"><a href="pet.html">Read the artist statement</a></p>
       </figcaption>
     </figure>
     <figure class="work" id="bacon-study">
       <a class="work-pic" href="bacon-study.jpg">
-        <img src="bacon-study.jpg" width="1191" height="1600" loading="lazy" alt="A portrait in the style of Francis Bacon: a man’s face smeared and twisted with streaks of pink, white and red against a pale pink background.">
+        <img src="bacon-study.jpg" width="1191" height="1600" loading="lazy" alt="A portrait in the style of Francis Bacon: a man’s face smeared and twisted with streaks of pink, white, and red against a pale pink background.">
       </a>
       <figcaption>
-        <h3>Francis Bacon Master Study</h3>
+        <h3>Francis Bacon (Master Study)</h3>
         <p>Oil on canvas</p>
-        <p class="todo">Size needed</p>
+        <p>24″ × 18″</p>
       </figcaption>
     </figure>
     <figure class="work" id="hurt">
@@ -157,28 +163,28 @@
       </a>
       <figcaption>
         <h3>Hurt</h3>
-        <p>Etching, printed in red and black</p>
-        <p class="todo">Size needed</p>
+        <p>Etching, printed in black and red, edition of 4</p>
+        <p>11″ × 15″</p>
       </figcaption>
     </figure>
-    <figure class="work" id="figure">
+    <figure class="work" id="nude-figure">
       <a class="work-pic" href="figure.jpg">
-        <img src="figure.jpg" width="1200" height="1600" loading="lazy" alt="A colored pencil drawing of a seated nude woman seen from behind, with magenta hair and crosshatched skin in red, yellow and blue.">
+        <img src="figure.jpg" width="1200" height="1600" loading="lazy" alt="A colored pencil drawing of a seated nude woman seen from behind, with magenta hair and crosshatched skin in red, yellow, and blue.">
       </a>
       <figcaption>
-        <h3>Figure</h3>
+        <h3>Nude Figure</h3>
         <p>Colored pencil on paper</p>
-        <p class="todo">Size needed</p>
+        <p>24″ × 18″</p>
       </figcaption>
     </figure>
-    <figure class="work" id="au-plein-air">
+    <figure class="work" id="en-plein-air">
       <a class="work-pic" href="au-plein-air.jpg">
         <img src="au-plein-air.jpg" width="1600" height="1200" loading="lazy" alt="A plein air oil painting of stone steps leading up to an old building, with dappled sunlight and yellow-green leaves.">
       </a>
       <figcaption>
-        <h3>Au Plein Air</h3>
+        <h3>En Plein Air</h3>
         <p>Oil on canvas</p>
-        <p class="todo">Size needed</p>
+        <p>18″ × 24″</p>
       </figcaption>
     </figure>
     <figure class="work" id="leprosy">
@@ -187,18 +193,18 @@
       </a>
       <figcaption>
         <h3>Leprosy</h3>
-        <p>Ink, watercolor and colored pencil, collaged on a painted panel</p>
-        <p class="todo">Size needed</p>
+        <p>Ink, watercolor, and colored pencil, collaged on a painted panel</p>
+        <p>14″ × 11″</p>
       </figcaption>
     </figure>
     <figure class="work" id="serious-house">
-      <a class="work-pic" href="serious-diptych.jpg" data-more="serious-house.jpg|Left panel: Batman’s silhouette, cape and pointed ears, against a bright blue light.;serious-earth.jpg|Right panel: the Joker’s face, mostly in shadow, with a wide grin.">
+      <a class="work-pic" href="serious-diptych.jpg" data-more="serious-house.jpg|Left panel: Batman’s silhouette, cape, and pointed ears, against a bright blue light.;serious-earth.jpg|Right panel: the Joker’s face, mostly in shadow, with a wide grin.">
         <img src="serious-diptych.jpg" width="1829" height="1200" loading="lazy" alt="Two dark paintings side by side: Batman’s silhouette against a bright blue light, and the Joker’s grinning face in shadow.">
       </a>
       <figcaption>
         <h3>A Serious House on a Serious Earth</h3>
         <p>Oil on canvas, diptych</p>
-        <p class="todo">Size needed</p>
+        <p>24″ × 38″</p>
       </figcaption>
     </figure>
     <figure class="work" id="poison">
@@ -208,7 +214,7 @@
       <figcaption>
         <h3>Poison</h3>
         <p>Pen and ink on paper</p>
-        <p class="todo">Size needed</p>
+        <p>11″ × 14″</p>
       </figcaption>
     </figure>
     <figure class="work" id="self-portrait-2024">
@@ -218,7 +224,7 @@
       <figcaption>
         <h3>Self Portrait (2024)</h3>
         <p>Graphite and colored pencil on paper</p>
-        <p class="todo">Size needed</p>
+        <p>Approx. 36″ × 13″</p>
       </figcaption>
     </figure>
     <figure class="work" id="superhero">
@@ -228,7 +234,7 @@
       <figcaption>
         <h3>Superhero Who Vaguely Looks Like Spider-Man But Isn’t</h3>
         <p>Linocut in red and black, edition of 5, also printed on T-shirts</p>
-        <p class="todo">Size needed</p>
+        <p>9″ × 12″</p>
       </figcaption>
     </figure>
     <figure class="work" id="glass">
@@ -238,17 +244,17 @@
       <figcaption>
         <h3>Glass</h3>
         <p>Colored pencil and watercolor on toned paper</p>
-        <p class="todo">Size needed</p>
+        <p>22″ × 30″</p>
       </figcaption>
     </figure>
-    <figure class="work" id="self-portrait-2023">
-      <a class="work-pic" href="self-portrait-2023.jpg">
-        <img src="self-portrait-2023.jpg" width="1198" height="1600" loading="lazy" alt="A painting of the artist seated on a stool, painted almost entirely in hot orange and red against a dark teal background.">
+    <figure class="work" id="a-bag">
+      <a class="work-pic" href="bag-still-life.jpg">
+        <img src="bag-still-life.jpg" width="1200" height="1600" loading="lazy" alt="A still life painting of a paper bag, salt shaker, and pear on a red stool, with an apple, two oranges, and a spoon on a green table.">
       </a>
       <figcaption>
-        <h3>Self Portrait (2023)</h3>
+        <h3>A bag and some other stuff</h3>
         <p>Oil on canvas</p>
-        <p class="todo">Size needed</p>
+        <p>24″ × 18″</p>
       </figcaption>
     </figure>
     <figure class="work" id="ultramarines">
@@ -258,39 +264,40 @@
       <figcaption>
         <h3>Ultramarines</h3>
         <p>Graphite on paper</p>
-        <p class="todo">Size needed</p>
+        <p>14″ × 11″</p>
       </figcaption>
     </figure>
     <figure class="work" id="waco">
       <a class="work-pic" href="waco.jpg">
-        <img src="waco.jpg" width="1200" height="1600" loading="lazy" alt="A colored pencil drawing of a deer running across dark red ground past a ruined building, under a flagpole flying the U.S. flag, the Texas flag and an ATF flag.">
+        <img src="waco.jpg" width="1200" height="1600" loading="lazy" alt="A drawing of a deer running across dark red ground past a ruined building, under a flagpole flying the U.S. flag, the Texas flag, and an ATF flag.">
       </a>
       <figcaption>
         <h3>Waco</h3>
-        <p>Colored pencil and watercolor on paper</p>
-        <p class="todo">Size needed</p>
+        <p>Colored pencil, watercolor, and oil pastel on paper</p>
+        <p>24″ × 18″</p>
       </figcaption>
     </figure>
     <figure class="work" id="watchmaker">
       <a class="work-pic" href="watchmaker.jpg">
-        <img src="watchmaker.jpg" width="948" height="1280" loading="lazy" alt="A comic-style ink drawing of a bald, masked man rubbing his eye while smoke rises from his forehead.">
+        <img src="watchmaker.jpg" width="948" height="1280" loading="lazy" alt="A comic-style portrait made of black yarn and twine glued on paper: a bald, masked man rubbing his eye while smoke rises from his forehead.">
       </a>
       <figcaption>
         <h3>Watchmaker</h3>
-        <p>Ink on paper</p>
-        <p class="todo">Size needed</p>
+        <p>Yarn and twine glued on paper</p>
+        <p>24″ × 18″</p>
       </figcaption>
     </figure>
   </div>
   </section>
 
-  <p class="more-note">There’s more sculpture, painting and drawing on the <a href="more.html">More work</a> page.</p>
+  <p class="more-note">There’s more sculpture, painting, and drawing in the <a href="archive.html">Archive</a>.</p>
 </main>
 
 <footer class="wrap foot">
   <p>&copy; 2026 Nate Langley. All artwork and writing are my own.</p>
   <p><a href="mailto:nate.langley6@gmail.com">nate.langley6@gmail.com</a></p>
 </footer>
+<script src="site.js"></script>
 
 <dialog class="viewer" id="viewer" aria-label="Artwork viewer">
   <div class="viewer-pics"></div>

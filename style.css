@@ -1,0 +1,286 @@
+/*
+  Nate Langley — site styles
+  Every page uses this one file, so a change here changes the whole site.
+  Colors and fonts are set once, in :root below.
+*/
+
+@font-face{
+  font-family:"Jacquard 24";
+  src:url("jacquard-24-latin-400-normal.woff2") format("woff2");
+  font-weight:400; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Archivo";
+  src:url("archivo-latin-standard-normal.woff2") format("woff2-variations"),
+      url("archivo-latin-standard-normal.woff2") format("woff2");
+  font-weight:100 900; font-stretch:62% 125%; font-style:normal; font-display:swap;
+}
+@font-face{
+  font-family:"Archivo";
+  src:url("archivo-latin-standard-italic.woff2") format("woff2-variations"),
+      url("archivo-latin-standard-italic.woff2") format("woff2");
+  font-weight:100 900; font-stretch:62% 125%; font-style:italic; font-display:swap;
+}
+
+:root{
+  --ink:#000000;      /* background */
+  --bone:#E9E2CE;     /* main text */
+  --ash:#A39D8D;      /* captions and small details */
+  --red:#E2392A;      /* links and highlights only */
+  --edge:#36332C;     /* thin dividing lines */
+
+  --display:"Jacquard 24",Georgia,serif;
+  --text:"Archivo",Arial,Helvetica,sans-serif;
+
+  --wrap:1240px;
+  --gut:clamp(20px,4vw,40px);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--ink);color:var(--bone);-webkit-text-size-adjust:100%}
+body{margin:0;font:400 18px/1.6 var(--text);font-stretch:100%}
+img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-weight:600;line-height:1.25}
+
+a{
+  color:inherit;
+  text-decoration:underline;
+  text-decoration-color:var(--red);
+  text-decoration-thickness:2px;
+  text-underline-offset:.22em;
+}
+a:hover{color:var(--red)}
+:focus-visible{outline:2px solid var(--bone);outline-offset:4px}
+::selection{background:var(--red);color:var(--ink)}
+
+.skip{position:absolute;left:-9999px;top:0}
+.skip:focus{left:var(--gut);top:12px;z-index:5;padding:8px 12px;background:var(--bone);color:var(--ink)}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut)}
+
+/* ---------- header ---------- */
+.top{
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
+  gap:12px 32px;
+  padding-top:24px; padding-bottom:24px;
+}
+.top-home{justify-content:flex-end}
+.home-link{font:400 48px/1 var(--display);text-decoration:none}
+.home-link:hover{color:var(--red)}
+.nav{display:flex;gap:28px;margin:0;padding:0;list-style:none}
+.nav a{
+  display:block;
+  padding:2px 0;
+  font-size:19px; font-weight:600; font-stretch:75%;
+  text-decoration:none;
+  border-bottom:3px solid transparent;
+}
+.nav a:hover{color:var(--bone);border-bottom-color:var(--red)}
+.nav a[aria-current]{border-bottom-color:var(--red)}
+
+/* ---------- home ---------- */
+.mast{padding:0 0 56px}
+.mast h1{
+  margin:0 0 0 -.04em;
+  font:400 192px/.82 var(--display);
+}
+.mast p{margin:28px 0 0;max-width:36em;font-size:21px;line-height:1.45}
+.mast p + p{margin-top:12px;font-size:18px;line-height:1.6;color:var(--ash)}
+
+/* a group of work, such as Sculpture or Range */
+.set{margin:0 0 112px}
+.set-head{margin:0 0 40px}
+.set-head h2{margin:0;font:400 96px/.9 var(--display)}
+.set-head p{margin:14px 0 0;max-width:40em;font-size:21px;line-height:1.45}
+.title ~ .set .set-head h2{font-size:72px}
+
+/* the gallery: every photo sits in the same-shaped box, shown whole and
+   lined up on its bottom-left corner so the captions line up below it */
+.gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:64px 32px}
+.work{grid-column:span 4;margin:0;min-width:0}
+.gallery-feature .work.big{grid-column:span 6}
+.work-pic{display:block}
+.work-pic img{width:100%;height:auto}
+@media (min-width:621px){
+  .work-pic img{aspect-ratio:1/1;object-fit:contain;object-position:left bottom}
+  .gallery-feature .work-pic img{aspect-ratio:4/5}
+}
+.work-pic:hover img{opacity:.85}
+.work figcaption{margin-top:14px;color:var(--bone)}
+.work h3{margin:0 0 2px;font-size:19px}
+.work figcaption p{margin:0;font-size:15px;line-height:1.45;color:var(--ash)}
+.work .statement-link{margin-top:6px}
+.work .statement-link a{color:var(--bone)}
+.todo{display:inline-block;margin-top:2px !important;padding:0 6px;color:var(--ink) !important;background:var(--red)}
+
+.more-note{margin:0;font-size:21px}
+
+/* ---------- page titles ---------- */
+.title{margin:24px 0 40px;font:400 96px/.9 var(--display)}
+
+/* ---------- one artwork ---------- */
+.piece{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:start}
+.pics{display:grid;gap:40px}
+.pics-stick{position:sticky;top:24px}
+.pics a{display:block}
+figure{margin:0}
+figcaption{margin-top:10px;font-size:15px;line-height:1.45;color:var(--ash)}
+
+.facts{
+  display:grid; grid-template-columns:max-content minmax(0,1fr); gap:8px 24px;
+  margin:0 0 32px; padding:0 0 28px;
+  border-bottom:1px solid var(--edge);
+}
+.facts dt{font-weight:600;font-stretch:75%;color:var(--ash)}
+.facts dd{margin:0}
+
+.prose p{margin:0 0 1em;max-width:62ch}
+.prose p:last-child{margin-bottom:0}
+
+.quote{margin:0 0 36px;padding:2px 0 2px 22px;border-left:3px solid var(--red)}
+.quote p{margin:0;font-style:italic;max-width:60ch}
+.quote cite{display:block;margin-top:12px;font-style:normal;font-size:15px;line-height:1.45;color:var(--ash)}
+
+.pager{
+  display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px 32px;
+  margin:88px 0 0; padding-top:24px;
+  border-top:1px solid var(--edge);
+}
+.pager a{text-decoration:none;font-size:19px;font-weight:600;font-stretch:75%}
+.pager a:last-child{text-align:right;margin-left:auto}
+.pager small{display:block;font-size:15px;font-weight:400;font-stretch:100%;color:var(--ash)}
+.pager a:hover small{color:var(--ash)}
+
+/* ---------- writing ---------- */
+.intro{margin:0 0 40px;max-width:40em;font-size:21px;line-height:1.45}
+.texts{margin:0;padding:0;list-style:none;max-width:780px}
+.texts li{padding:28px 0 30px;border-top:1px solid var(--edge)}
+.texts h2{margin:0;font-size:24px}
+.texts .kind{margin:2px 0 12px;font-size:15px;color:var(--ash)}
+.texts p{margin:0 0 14px;max-width:62ch}
+.texts p:last-child{margin:0}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px;align-items:start}
+.about-side{position:sticky;top:24px}
+.about-side figure{max-width:380px}
+.reach{margin:28px 0 0;padding:0;list-style:none}
+.reach li{margin:0 0 14px}
+.button{
+  display:inline-block;
+  padding:11px 18px;
+  font-size:19px; font-weight:600; font-stretch:75%;
+  color:var(--ink); background:var(--bone);
+  text-decoration:none;
+}
+.button:hover{color:var(--ink);background:var(--red)}
+
+.about h2{margin:56px 0 18px;font-size:21px}
+.about .prose + h2{margin-top:56px}
+
+.dogma{max-width:560px;padding:26px 30px 28px;border:2px solid var(--red)}
+.dogma-name{margin:0;font:400 144px/.8 var(--display)}
+.dogma p{margin:0}
+.dogma .when{margin-top:18px;font-size:21px;font-weight:600}
+.dogma .what{color:var(--ash)}
+
+.cv{margin:0;padding:0;list-style:none;max-width:62ch}
+.cv li{margin:0 0 22px}
+.cv b{display:block;font-weight:600}
+.cv span{display:block;font-size:15px;color:var(--ash)}
+
+/* ---------- pop-up viewer ---------- */
+html.viewing{overflow:hidden}
+.viewer{
+  width:100vw; height:100vh; height:100dvh; max-width:none; max-height:none;
+  margin:0; padding:0; border:0;
+  color:var(--bone); background:var(--ink);
+}
+.viewer::backdrop{background:var(--ink)}
+.viewer[open]{display:grid;grid-template-columns:minmax(0,1fr) 360px}
+.viewer-pics{
+  overflow-y:auto;
+  display:flex; flex-direction:column; align-items:center; gap:40px;
+  padding:32px;
+}
+.viewer-pics img{
+  flex:none;
+  max-width:100%; max-height:calc(100dvh - 64px);
+  width:auto; height:auto;
+}
+.viewer-info{
+  display:flex; flex-direction:column; justify-content:space-between; gap:24px;
+  padding:40px 40px 32px 8px;
+}
+.viewer-caption h3{margin:0 0 8px;font-size:24px;line-height:1.25}
+.viewer-caption p{margin:0 0 4px;color:var(--ash)}
+.viewer-caption .statement-link{margin-top:14px}
+.viewer-caption .statement-link a{color:var(--bone)}
+.viewer-caption .viewer-hint{margin-top:14px;color:var(--bone)}
+.viewer-count{margin:0 0 12px;font-size:15px;color:var(--ash)}
+.viewer-buttons{display:flex;flex-wrap:wrap;gap:10px}
+.viewer-buttons button{
+  padding:9px 14px;
+  font:600 19px/1 var(--text); font-stretch:75%;
+  color:var(--bone); background:none;
+  border:2px solid var(--edge);
+  cursor:pointer;
+}
+.viewer-buttons button:hover{border-color:var(--red)}
+.viewer-buttons [data-close]{margin-left:auto}
+
+/* ---------- 404 ---------- */
+.lost p{font-size:21px;max-width:36em}
+
+/* ---------- footer ---------- */
+.foot{
+  display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px 24px;
+  width:calc(100% - 2 * var(--gut)); max-width:calc(var(--wrap) - 2 * var(--gut));
+  margin:120px auto 0; padding:24px 0 40px;
+  border-top:1px solid var(--edge);
+  font-size:15px; color:var(--ash);
+}
+.foot p{margin:0}
+
+/* ---------- smaller screens ---------- */
+@media (max-width:1180px){
+  .mast h1{font-size:144px}
+}
+@media (max-width:900px){
+  .mast h1{font-size:120px}
+  .title,.set-head h2{font-size:72px}
+  .piece,.about{grid-template-columns:minmax(0,1fr);gap:40px}
+  .pics-stick,.about-side{position:static}
+  .gallery{gap:48px 20px}
+  .work,.gallery-feature .work.big{grid-column:span 6}
+  .viewer[open]{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+  .viewer-pics{padding:20px 20px 0}
+  .viewer-pics img{max-height:calc(100dvh - 240px)}
+  .viewer-info{padding:16px 20px 20px;gap:12px}
+  .viewer-caption h3{font-size:19px;margin-bottom:2px}
+  .viewer-caption p{font-size:15px;margin:0}
+  .viewer-caption .statement-link{margin-top:6px}
+}
+@media (max-width:620px){
+  body{font-size:17px}
+  .top{padding-top:18px;padding-bottom:18px}
+  .home-link{font-size:48px}
+  .nav{gap:22px}
+  .mast{padding-bottom:40px}
+  .mast h1{font-size:96px;line-height:.86}
+  .mast p{font-size:19px}
+  .title,.set-head h2,.title ~ .set .set-head h2{font-size:48px}
+  .title{margin:12px 0 28px}
+  .set{margin-bottom:88px}
+  .set-head{margin-bottom:28px}
+  .set-head p,.more-note{font-size:19px}
+  .work,.gallery-feature .work.big{grid-column:1/-1}
+  .intro{font-size:19px}
+  .dogma{padding:22px 22px 24px}
+  .dogma-name{font-size:96px}
+  .pager{margin-top:64px}
+  .foot{margin-top:88px}
+}
+@media (max-width:400px){
+  .mast h1{font-size:72px}
+}

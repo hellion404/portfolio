@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nate Langley</title>
+<meta name="description" content="The art portfolio of Nate Langley, an artist and art teacher in training in College Park, Maryland: sculpture, painting, printmaking and drawing.">
+<link rel="stylesheet" href="style.css">
+<!--
+  HOW THIS SITE IS PUT TOGETHER
+  * index.html (this page) holds the main portfolio: the sculpture
+    concentration first, then the range of other media.
+  * Each piece is one <figure class="work"> … </figure> block. To change a
+    title, medium or size, edit the text inside its <figcaption>.
+  * Sizes still to fill in say "Size needed". Search for that phrase, replace
+    it with the size, and delete class="todo" from that line.
+  * To add a piece: put the photo next to these files, copy a whole
+    <figure> block, paste it where you want it, and change the file name,
+    alt text (a short description for people who can't see the image),
+    title and details. Extra photos of the same piece go in data-more,
+    written as file.jpg|description, separated by semicolons.
+  * Colors and fonts live in style.css. The pop-up viewer lives in viewer.js.
+  * Keep every file in the same folder, with no subfolders, when you upload.
+-->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="wrap top top-home">
+  <nav aria-label="Main">
+    <ul class="nav">
+      <li><a href="index.html" aria-current="page">Work</a></li>
+      <li><a href="writing.html">Writing</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main" class="wrap">
+  <div class="mast">
+    <h1>Nate Langley</h1>
+    <p>Artist and art teacher in training in College Park, Maryland. I make sculpture, paintings, prints and drawings, and I write.</p>
+    <p>Select any piece to see it larger and flip through the rest.</p>
+  </div>
+
+  <section class="set" id="sculpture" aria-labelledby="sculpture-h">
+    <div class="set-head">
+      <h2 id="sculpture-h">Sculpture</h2>
+      <p>My concentration: seven sculptures in steel, wood, clay, paper and found objects.</p>
+    </div>
+  <div class="gallery gallery-feature">
+    <figure class="work big" id="monolith">
+      <a class="work-pic" href="monolith-snow.jpg" data-more="monolith-scale.jpg|The same column freshly welded, standing beside the artist, who is exactly its height.">
+        <img src="monolith-snow.jpg" width="1019" height="1600" loading="lazy" alt="A tall square steel column standing in a snowy yard, rusted bright orange on its lower half, with a viewing hole cut near the top.">
+      </a>
+      <figcaption>
+        <h3>Untitled (The Monolith)</h3>
+        <p>Welded steel</p>
+        <p>6 ft tall</p>
+        <p class="statement-link"><a href="monolith.html">Read the artist statement</a></p>
+      </figcaption>
+    </figure>
+    <figure class="work big" id="poo-mans-love">
+      <a class="work-pic" href="poo-mans-love.jpg">
+        <img src="poo-mans-love.jpg" width="1200" height="1600" loading="lazy" alt="A brown coiled serpent sculpture with a troll doll’s smiling face and open arms, an orange VHS reel behind its head like a halo, and a strip of videotape hanging down to the table.">
+      </a>
+      <figcaption>
+        <h3>Poo Man’s Love</h3>
+        <p>Wood, deconstructed troll doll, VHS reel and tape, acrylic paint</p>
+        <p>About 14 × 11 in</p>
+        <p class="statement-link"><a href="poo-mans-love.html">Read the artist statement</a></p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="kermit">
+      <a class="work-pic" href="kermit-1.jpg" data-more="kermit-2.jpg|The same sculpture seen from the front, standing in a gallery hallway.">
+        <img src="kermit-1.jpg" width="1200" height="1600" loading="lazy" alt="Two tall A-frames of wooden poles lashed together with twine hold up a crossbar, with a Kermit the Frog plush draped over it.">
+      </a>
+      <figcaption>
+        <h3>Hi Ho Kermit the Fraud</h3>
+        <p>Wooden poles, twine and a Kermit the Frog plush</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="flow">
+      <a class="work-pic" href="flow-1.jpg" data-more="flow-2.jpg|The same sculpture seen from the other side.">
+        <img src="flow-1.jpg" width="1600" height="1200" loading="lazy" alt="A small sculpture of interlocking blocks of reddish hardwood and layered plywood, with a looping black steel rod winding around and through them.">
+      </a>
+      <figcaption>
+        <h3>Flow</h3>
+        <p>Hardwood, plywood and bent steel rod</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="pissman">
+      <a class="work-pic" href="pissman.jpg">
+        <img src="pissman.jpg" width="1200" height="1600" loading="lazy" alt="A lumpy ceramic figure glazed bright yellow, with two holes for eyes, a wide mouth and stubby arms.">
+      </a>
+      <figcaption>
+        <h3>PISSMAN</h3>
+        <p>Glazed ceramic</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work big" id="overgrowth">
+      <a class="work-pic" href="overgrowth.jpg">
+        <img src="overgrowth.jpg" width="1200" height="1600" loading="lazy" alt="Green and yellow papier-mâché leaves and stems on wire, growing out of an open metal cabinet under a studio workbench.">
+      </a>
+      <figcaption>
+        <h3>Overgrowth</h3>
+        <p>Papier-mâché over wire, watercolor and twine, installed in a studio cabinet</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work big" id="untitled-wood">
+      <a class="work-pic" href="untitled-wood.jpg">
+        <img src="untitled-wood.jpg" width="1200" height="1600" loading="lazy" alt="A tall stack of rounded wooden shapes, each with a hole cut through it, balanced on a white plinth.">
+      </a>
+      <figcaption>
+        <h3>Untitled</h3>
+        <p>Cut and stacked wood</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+  </div>
+  </section>
+
+  <section class="set" id="range" aria-labelledby="range-h">
+    <div class="set-head">
+      <h2 id="range-h">Range</h2>
+      <p>Fifteen works across painting, printmaking, collage and drawing.</p>
+    </div>
+  <div class="gallery">
+    <figure class="work" id="pet">
+      <a class="work-pic" href="pet.jpg">
+        <img src="pet.jpg" width="1026" height="1600" loading="lazy" alt="A painting in red, blue and black of a large figure in a starred hoodie resting a hand on the head of a smaller figure whose eyes are closed.">
+      </a>
+      <figcaption>
+        <h3>Pet</h3>
+        <p>Acrylic and colored pencil on cardboard</p>
+        <p>About 8 × 5 in</p>
+        <p class="statement-link"><a href="pet.html">Read the artist statement</a></p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="bacon-study">
+      <a class="work-pic" href="bacon-study.jpg">
+        <img src="bacon-study.jpg" width="1191" height="1600" loading="lazy" alt="A portrait in the style of Francis Bacon: a man’s face smeared and twisted with streaks of pink, white and red against a pale pink background.">
+      </a>
+      <figcaption>
+        <h3>Francis Bacon Master Study</h3>
+        <p>Oil on canvas</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="hurt">
+      <a class="work-pic" href="hurt.jpg" data-more="hurt-editions.jpg|Four prints of the same etching laid out on a table, in black, in red, and in black with a red speech bubble.">
+        <img src="hurt.jpg" width="1600" height="1099" loading="lazy" alt="An etching printed on red of a goose honking at a pair of legs in jeans and boots, with a speech bubble that says HONK!">
+      </a>
+      <figcaption>
+        <h3>Hurt</h3>
+        <p>Etching, printed in red and black</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="figure">
+      <a class="work-pic" href="figure.jpg">
+        <img src="figure.jpg" width="1200" height="1600" loading="lazy" alt="A colored pencil drawing of a seated nude woman seen from behind, with magenta hair and crosshatched skin in red, yellow and blue.">
+      </a>
+      <figcaption>
+        <h3>Figure</h3>
+        <p>Colored pencil on paper</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="au-plein-air">
+      <a class="work-pic" href="au-plein-air.jpg">
+        <img src="au-plein-air.jpg" width="1600" height="1200" loading="lazy" alt="A plein air oil painting of stone steps leading up to an old building, with dappled sunlight and yellow-green leaves.">
+      </a>
+      <figcaption>
+        <h3>Au Plein Air</h3>
+        <p>Oil on canvas</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="leprosy">
+      <a class="work-pic" href="leprosy.jpg">
+        <img src="leprosy.jpg" width="967" height="1240" loading="lazy" alt="A collage of a figure in a jacket and hoodie, drawn in gray ink wash, whose head is a curled-up armadillo, against a dark red painted background.">
+      </a>
+      <figcaption>
+        <h3>Leprosy</h3>
+        <p>Ink, watercolor and colored pencil, collaged on a painted panel</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="serious-house">
+      <a class="work-pic" href="serious-diptych.jpg" data-more="serious-house.jpg|Left panel: Batman’s silhouette, cape and pointed ears, against a bright blue light.;serious-earth.jpg|Right panel: the Joker’s face, mostly in shadow, with a wide grin.">
+        <img src="serious-diptych.jpg" width="1829" height="1200" loading="lazy" alt="Two dark paintings side by side: Batman’s silhouette against a bright blue light, and the Joker’s grinning face in shadow.">
+      </a>
+      <figcaption>
+        <h3>A Serious House on a Serious Earth</h3>
+        <p>Oil on canvas, diptych</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="poison">
+      <a class="work-pic" href="poison.jpg">
+        <img src="poison.jpg" width="1600" height="1195" loading="lazy" alt="A pen and ink drawing in perspective of a barn and silo, with factory smokestacks behind it and the shadow of a large spider on the barn wall.">
+      </a>
+      <figcaption>
+        <h3>Poison</h3>
+        <p>Pen and ink on paper</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="self-portrait-2024">
+      <a class="work-pic" href="self-portrait-2024.jpg">
+        <img src="self-portrait-2024.jpg" width="615" height="1600" loading="lazy" alt="A full-length graphite drawing of the artist in a backwards cap and T-shirt, shrugging, with a small red question mark above his head.">
+      </a>
+      <figcaption>
+        <h3>Self Portrait (2024)</h3>
+        <p>Graphite and colored pencil on paper</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="superhero">
+      <a class="work-pic" href="superhero.jpg" data-more="superhero-shirts.jpg|The same design printed on three T-shirts, one in red and black on white and two in black on gray.">
+        <img src="superhero.jpg" width="1600" height="1258" loading="lazy" alt="A red and black linocut of a masked superhero in a web-patterned suit, with jagged black shapes radiating out behind him.">
+      </a>
+      <figcaption>
+        <h3>Superhero Who Vaguely Looks Like Spider-Man But Isn’t</h3>
+        <p>Linocut in red and black, edition of 5, also printed on T-shirts</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="glass">
+      <a class="work-pic" href="glass.jpg">
+        <img src="glass.jpg" width="1600" height="1166" loading="lazy" alt="A perspective drawing of a glass house on stilts in blue pencil and wash, crossed by long ruled lines and a large red arrow.">
+      </a>
+      <figcaption>
+        <h3>Glass</h3>
+        <p>Colored pencil and watercolor on toned paper</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="self-portrait-2023">
+      <a class="work-pic" href="self-portrait-2023.jpg">
+        <img src="self-portrait-2023.jpg" width="1198" height="1600" loading="lazy" alt="A painting of the artist seated on a stool, painted almost entirely in hot orange and red against a dark teal background.">
+      </a>
+      <figcaption>
+        <h3>Self Portrait (2023)</h3>
+        <p>Oil on canvas</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="ultramarines">
+      <a class="work-pic" href="ultramarines.jpg">
+        <img src="ultramarines.jpg" width="1201" height="1600" loading="lazy" alt="A graphite drawing of two armored Warhammer miniatures standing in front of a mesh cup full of brushes and pens.">
+      </a>
+      <figcaption>
+        <h3>Ultramarines</h3>
+        <p>Graphite on paper</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="waco">
+      <a class="work-pic" href="waco.jpg">
+        <img src="waco.jpg" width="1200" height="1600" loading="lazy" alt="A colored pencil drawing of a deer running across dark red ground past a ruined building, under a flagpole flying the U.S. flag, the Texas flag and an ATF flag.">
+      </a>
+      <figcaption>
+        <h3>Waco</h3>
+        <p>Colored pencil and watercolor on paper</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+    <figure class="work" id="watchmaker">
+      <a class="work-pic" href="watchmaker.jpg">
+        <img src="watchmaker.jpg" width="948" height="1280" loading="lazy" alt="A comic-style ink drawing of a bald, masked man rubbing his eye while smoke rises from his forehead.">
+      </a>
+      <figcaption>
+        <h3>Watchmaker</h3>
+        <p>Ink on paper</p>
+        <p class="todo">Size needed</p>
+      </figcaption>
+    </figure>
+  </div>
+  </section>
+
+  <p class="more-note">There’s more sculpture, painting and drawing on the <a href="more.html">More work</a> page.</p>
+</main>
+
+<footer class="wrap foot">
+  <p>&copy; 2026 Nate Langley. All artwork and writing are my own.</p>
+  <p><a href="mailto:nate.langley6@gmail.com">nate.langley6@gmail.com</a></p>
+</footer>
+
+<dialog class="viewer" id="viewer" aria-label="Artwork viewer">
+  <div class="viewer-pics"></div>
+  <div class="viewer-info">
+    <div class="viewer-caption"></div>
+    <div class="viewer-controls">
+      <p class="viewer-count"></p>
+      <div class="viewer-buttons">
+        <button type="button" data-go="-1">Previous</button>
+        <button type="button" data-go="1">Next</button>
+        <button type="button" data-close>Close</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<script src="viewer.js"></script>
+</body>
+</html>
